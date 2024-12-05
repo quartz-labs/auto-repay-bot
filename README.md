@@ -23,7 +23,7 @@ To carry out an Auto-Repay transaction, the following instructions must be calle
 3. auto_repay_deposit (Quartz)
 4. auto_repay_withdraw (Quartz)
 
-This bot wraps these instructions around a MarginFi flash loan. See executeAutoRepay() in src/autoRepayBot.ts for exactly how it does this.
+This bot wraps these instructions around a MarginFi flash loan. See executeAutoRepay() in src/collateralRepayBot.ts for exactly how it does this.
 
 ## Running your own bot
 

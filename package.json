@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "description": "Bot for calling auto-repay instructions on the Quartz protocol",
   "main": "index.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
+    "build": "tsc -p tsconfig.json",
     "dev": "NODE_ENV=development tsx src/index.ts",
     "start": "tsc -p tsconfig.json && node build/index.js",
+    "lint": "yarn biome lint --write",
     "test": "vitest",
     "test:coverage": "vitest run --coverage"
   },
@@ -23,10 +25,9 @@
   "dependencies": {
     "@aws-sdk/client-secrets-manager": "^3.696.0",
     "@coral-xyz/anchor": "0.29.0",
-    "@drift-labs/sdk": "^2.100.0-beta.5",
     "@jup-ag/api": "^6.0.29",
     "@mrgnlabs/marginfi-client-v2": "^4.0.0",
-    "@pythnetwork/pyth-solana-receiver": "^0.8.2",
+    "@quartz-labs/sdk": "^0.0.12",
     "@solana/spl-token": "0.3.11",
     "@solana/web3.js": "1.92.3",
     "@types/node": "^22.10.0",
@@ -43,6 +44,7 @@
     "@solana/web3.js": "1.92.3"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@types/express": "^5.0.0",
     "@types/nodemailer": "^6.4.17"
   }

@@ -1,5 +1,5 @@
-import { Writable } from "stream";
-import winston, { createLogger, Logger, transports } from "winston";
+import { Writable } from "node:stream";
+import winston, { createLogger, type Logger, transports } from "winston";
 import nodemailer from "nodemailer";
 import config from "../config/config.js";
 
@@ -22,7 +22,7 @@ export class AppLogger {
 
         const mailTransporter = nodemailer.createTransport({
             host: config.EMAIL_HOST,
-            port: config.EMAIL_PORT!,
+            port: config.EMAIL_PORT,
             secure: false,
             auth: {
                 user: config.EMAIL_USER,

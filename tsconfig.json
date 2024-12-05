@@ -1,16 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
+    "target": "ES2020",
+    "module": "NodeNext",
+    "lib": ["ES2020"],
     "rootDir": "./src",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
     "outDir": "./build",
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
     "skipLibCheck": true,
-    "isolatedModules": true,
-    "allowJs": true
-  }
+    "sourceMap": true,
+    "strict": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "build"]
 }
